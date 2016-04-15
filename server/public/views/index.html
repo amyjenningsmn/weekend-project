@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="ticketApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Ticket Management System</title>
+    <script src="../vendor/angular/angular.min.js"></script>
+    <script src="../assets/scripts/client.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Ticket Maker</h1>
+    <div ng-controller="ParentController as parent">
+      Name: <input type="text" ng-model="parent.name" /></br>
+      Type: <input type="text" ng-model="parent.type" /></br>
+      Priority: <input type="text" ng-model="parent.priority" /></br>
+      Description: <input type="text" ng-model="parent.description" /></br>
+      Assignee: <input type="text" ng-model="parent.assignee" /></br>
+      Created: <input type="text" ng-model="parent.created" /></br>
+
+
+    </div>
+
+  </body>
+</html>
