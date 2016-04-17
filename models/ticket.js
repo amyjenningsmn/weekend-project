@@ -1,7 +1,6 @@
-// I think we do this so there is a model to use on the database
-
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+// created MongoDB model
 
 var ticketSchema = new Schema({
   name: String,
@@ -11,7 +10,7 @@ var ticketSchema = new Schema({
   assignee: String,
   reporter: String,
   created: Date,
-  updated, Date
+  updated: Date
 });
 
 var Ticket = mongoose.model('Ticket', ticketSchema);

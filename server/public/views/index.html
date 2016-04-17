@@ -5,21 +5,45 @@
     <title>Ticket Management System</title>
     <script src="../vendor/angular/angular.min.js"></script>
     <script src="../assets/scripts/client.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css" />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="views/style.css">
   </head>
-  <body>
-    <h1>Ticket Maker</h1>
-    <div ng-controller="ParentController as parent">
-      Name: <input type="text" ng-model="parent.name" /></br>
-      Type: <input type="text" ng-model="parent.type" /></br>
-      Priority: <input type="text" ng-model="parent.priority" /></br>
-      Description: <input type="text" ng-model="parent.description" /></br>
-      Assignee: <input type="text" ng-model="parent.assignee" /></br>
-      Created: <input type="text" ng-model="parent.created" /></br>
+  <body ng-controller="ParentController as parent">
+    <main class = "container">
+      <div class="header">
+        <h1>Ticket Maker</h1>
+      </div>
 
 
-    </div>
+      <div class="ticketForm">
+        <h2>Make a new ticket</h2>
+        <p>Name:<input type="text" ng-model="parent.ticket.name" /></p>
+        <p>Type: <input type="text" ng-model="parent.ticket.type" /></p>
+        <p>Priority: <input type="text" ng-model="parent.ticket.priority" /></p>
+        <p>Description: <input type="text" ng-model="parent.ticket.description" /></p>
+        <p>Assignee: <input type="text" ng-model="parent.ticket.assignee" /></p>
+        <button class="btn btn-submit" ng-click="parent.sendData()">Submit</button>
+      </div>
+  
+      <!-- tickets displayed -->
 
+      <div class = "well row col-md-4" ng-repeat="ticket in parent.ticketsReturned">
+        <p>Name: {{ticket.name}}</p>
+        <p>Type: {{ticket.type}}</p>
+        <p>Priority: {{ticket.priority}}</p>
+        <p>Description: {{ticket.description}}</p>
+        <p>Assignee: {{ticket.assignee}}</p>
+        <p>Created: {{ticket.created}}</p>
+        <p>Updated: {{ticket.updated}}</p>
+      </div>
+
+   </main>
   </body>
 </html>

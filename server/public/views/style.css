@@ -1,0 +1,39 @@
+body {
+  background-color: #51A3A3;
+  font-family: 'Muli', sans-serif;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 3em;
+  padding-top: 25px;
+}
+
+div {
+  margin: 10px;
+}
+
+.header {
+  background-color: #DD7373;
+  border-radius: 6px;
+  height: 100px;
+}
+
+.ticketForm {
+  border: 5px solid #EAD94C;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+p, h2{
+  margin-left: 15px;
+}
+
+.well {
+  border: 5px solid #EAD94C;
+  margin: 0 auto;
+
+}
